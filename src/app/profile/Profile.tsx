@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Profile.module.css";
 import Image from "next/image";
 import userImg from "@/assets/img/user.jpg";
@@ -14,13 +14,14 @@ const Profile: React.FC = () => {
   const { handleLogOut } = useUserMenu();
   const router = useRouter();
 
+  useEffect(() => {
+    if (!user) {
+      router.push("/");
+    }
+  }, [user, router]);
+
   if (!user) {
-    return (
-      <>
-        {router.push("/")}
-        <main className={styles.main}></main>
-      </>
-    );
+    return null;
   }
   return (
     <main className={styles.main}>

@@ -24,6 +24,7 @@ const Login: React.FC = () => {
       const res = await axios.post(`${APIURL}/users/login`, { email, password });
       Cookies.set("userToken", res.data.token);
       localStorage.setItem("userToken", res.data.token);
+      localStorage.setItem("user", JSON.stringify(res.data.user));
       setToken(res.data.token);
       setUser(res.data.user);
 

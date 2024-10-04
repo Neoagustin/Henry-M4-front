@@ -13,7 +13,7 @@ import Link from "next/link";
 
 // Función utilitaria: extraída para mayor legibilidad y reutilización
 const getInitials = (name: string | undefined) => {
-  if (!name) return []; // Cambiado a un arreglo vacío
+  if (!name) return null;
   const [firstName, secondName] = name.split(" ");
   const initials = [firstName?.charAt(0), secondName?.charAt(0)].filter(Boolean);
   return initials;
@@ -56,12 +56,20 @@ const LoggedInUserNav: React.FC = () => {
   const { user } = useUser();
   const { isLoading, menuOpen, toggleMenu, handleLogOut, menuRef } = useUserMenu();
 
+  // Agrega console.log para verificar el estado del usuario
+  console.log("User:", user);
+  console.log("isLoading:", isLoading);
+  console.log("Menu Open:", menuOpen);
+
   const initials = getInitials(user?.name);
-  const userName = user?.name?.split(" ")[0] || "Usuario"; // Valor por defecto si no hay nombre
+  const userName = user?.name?.split(" ")[0];
 
   if (isLoading) {
     return <div>Cargando...</div>;
   }
+
+  console.log("Initials:", initials);
+  console.log("User Name:", userName);
 
   return (
     <>
@@ -74,9 +82,7 @@ const LoggedInUserNav: React.FC = () => {
             ref={menuRef}
           >
             <div className={styles.userIconLoginContainer}>
-              {initials.map((letter, index) => (
-                <span key={index}>{letter}</span>
-              ))}
+              {initials && initials.map((letter, index) => <span key={index}>{letter}</span>)}
             </div>
             <div className={styles.userNameContainer}>
               <p className={styles.userName}>{userName}</p>
@@ -109,9 +115,7 @@ const LoggedInUserNav: React.FC = () => {
         ref={menuRef}
       >
         <div className={styles.userIconLoginContainer}>
-          {initials.map((letter, index) => (
-            <span key={index}>{letter}</span>
-          ))}
+          {initials && initials.map((letter, index) => <span key={index}>{letter}</span>)}
         </div>
         <div className={styles.userNameContainer}>
           <p className={styles.userName}>{userName}</p>
@@ -138,9 +142,8 @@ const LoggedInUserNav: React.FC = () => {
           onClick={toggleMenu}
         >
           <div className={styles.userIconLoginContainer}>
-            {initials.map((letter: string, index: number) => (
-              <span key={index}>{letter}</span>
-            ))}
+            {initials &&
+              initials.map((letter: string, index: number) => <span key={index}>{letter}</span>)}
           </div>
           <div className={styles.userProfileInfoContainer}>
             <h3>{userName}</h3>

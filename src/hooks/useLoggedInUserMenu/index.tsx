@@ -26,7 +26,12 @@ const useUserMenu = () => {
   }, [setToken, setUser]);
 
   //? Funciones de manejo
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const toggleMenu = () => {
+    if (!isLoading) {
+      setMenuOpen((prev) => !prev);
+    }
+  };
+
   const closeMenu = () => {
     console.log(menuOpen);
     setMenuOpen(false);

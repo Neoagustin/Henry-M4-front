@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react"; // Agregado Suspense aquí
 import { useSearchParams } from "next/navigation";
 import styles from "./Cart.module.css";
 import Link from "next/link";
@@ -15,7 +15,7 @@ import "sweetalert2/dist/sweetalert2.min.css";
 
 const Cart: React.FC = () => {
   const searchParams = useSearchParams();
-  const products: IProduct[] = useFetchProducts();
+  const products = useFetchProducts();
   const { user } = useUser();
   const router = useRouter();
   const APIURL = process.env.NEXT_PUBLIC_API_URL;
@@ -227,4 +227,10 @@ const Cart: React.FC = () => {
   );
 };
 
-export default Cart;
+const CartWrapper = () => (
+  <Suspense fallback={<div>Cargando...</div>}>
+    <Cart />
+  </Suspense>
+);
+
+export default CartWrapper;

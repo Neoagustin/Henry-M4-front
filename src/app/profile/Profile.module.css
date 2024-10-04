@@ -1,0 +1,219 @@
+/* Modo oscuro */
+.main {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  height: calc(100vh - 148px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.profileContainer {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profileName {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profileRole {
+  color: #00bcd4;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.profileDetails {
+  margin-bottom: 2rem;
+}
+
+.profileItem {
+  margin-bottom: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttonLogout,
+.buttonOrders {
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonLogout:hover,
+.buttonOrders:hover {
+  background-color: #444;
+}
+
+.buttonLogout {
+  background-color: #d9534f;
+}
+
+.buttonLogout:hover {
+  background-color: #ba4642;
+}
+
+.buttonOrders {
+  background-color: #00bcd4;
+}
+
+.buttonOrders:hover {
+  background-color: #00a2b8;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    min-height: calc(100vh - 130px);
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .buttonOrders {
+    order: 1;
+  }
+
+  .buttonLogout {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: calc(100vh - 117px);
+    box-shadow: none
+  }
+
+  .buttonContainer {
+    width: 50%;
+    margin: auto;
+  }
+
+  .profileContainer {
+    background-color: #1e1e1e;
+    box-shadow: none;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 575px) {
+  .profileImage {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .profileHeader {
+    margin-bottom: 1rem;
+  }
+
+  .profileName {
+    font-size: 1.8rem;
+  }
+
+  .profileRole {
+    font-size: 1.1rem;
+  }
+
+  .profileItem {
+    font-size: .9rem;
+    margin-bottom: .9rem;
+  }
+
+  .buttonContainer {
+    width: 230px;
+    margin: auto;
+  }
+
+  .buttonLogout,
+  .buttonOrders {
+    padding: 0.4rem 1rem;
+    font-size: .9rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .main {
+    min-height: calc(100vh - 102px);
+  }
+}
+
+@media (max-width: 380px) {
+  .main {
+    min-height: calc(100vh - 98px);
+  }
+
+  .profileImage {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .profileHeader {
+    margin-bottom: 1rem;
+  }
+
+  .profileName {
+    font-size: 1.7rem;
+  }
+
+  .profileRole {
+    font-size: 1rem;
+  }
+
+  .profileItem {
+    font-size: .8rem;
+    margin-bottom: .8rem;
+  }
+
+  .buttonContainer {
+    width: 230px;
+    margin: auto;
+  }
+
+  .buttonLogout,
+  .buttonOrders {
+    padding: 0.4rem .8rem;
+    font-size: .8rem;
+  }
+
+}
+
+@media (max-width: 280px) {
+  .buttonContainer {
+    width: 100%;
+  }
+}

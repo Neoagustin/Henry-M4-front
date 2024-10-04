@@ -1,0 +1,157 @@
+.filterBarContainer {
+  margin: 3em 0;
+  max-width: 240px;
+  width: 100%;
+  border-right: 1px solid #00BCD4;
+  border-radius: 7px;
+  padding: 1em 0;
+
+  & h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  & p {
+    color: #00bbd4;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 1em 0 1.5em;
+  }
+
+  & li {
+    margin-top: 0.9em;
+    list-style: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #00BCD4;
+    }
+  }
+
+  .active {
+    color: #0775bf;
+  }
+}
+
+.filterSelectContainer {
+  display: none;
+  align-items: center;
+  margin-bottom: .5em;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.selectLabel {
+  color: #f8f9fa;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.mobileSelect {
+  appearance: none;
+  background-color: #1e1e1e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f8f9fa' d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #f8f9fa;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 1em 0;
+  outline: none;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.mobileSelect:hover {
+  border-color: #00BCD4;
+}
+
+.mobileSelect:focus {
+  border-color: #00BCD4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.mobileSelect option {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+  .filterBarContainer {
+    max-width: 170px;
+
+    & h3 {
+      font-size: 1.3em;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .filterBarContainer {
+    display: none;
+  }
+
+  .filterSelectContainer {
+    display: flex;
+    max-width: 35vw;
+    width: 100%;
+    min-width: 260px;
+    margin-right: auto;
+    padding: 0 0em;
+    gap: 1em;
+  }
+
+  .mobileSelect {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .filterSelectContainer {
+    max-width: 35vw;
+    min-width: 200px;
+    gap: 5px;
+  }
+
+  .selectLabel {
+    font-size: 14px;
+  }
+
+  .mobileSelect {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .filterSelectContainer {
+    gap: 0;
+  }
+
+  .selectLabel {
+    font-size: 13px;
+
+  }
+
+  .mobileSelect {
+    margin: 4px 0 7px;
+    border-radius: 0;
+    padding: 3px 10px;
+    max-width: 100px;
+    font-size: 13px;
+  }
+}

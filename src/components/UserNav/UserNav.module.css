@@ -1,0 +1,481 @@
+#mobile {
+  display: none;
+}
+
+.desktopNav ul {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+}
+
+.desktopNav ul li a {
+  color: #F8F9FA;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.desktopNav ul li a:hover {
+  color: #00BCD4;
+}
+
+/* Login */
+.userContainerOpen {
+  background-color: #1e1e1e;
+
+}
+
+.userContainer {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .4em;
+  user-select: none;
+  padding: 6px 12px;
+}
+
+.userContainer:hover>.userIconLoginContainer {
+  background-color: #00BCD4;
+}
+
+.userContainer:hover>.userIconLoginContainer span {
+  color: #ffffff;
+}
+
+.userNameContainer {
+  display: flex;
+  align-items: center;
+  gap: .2em;
+}
+
+.userContainer {
+  position: relative;
+}
+
+.userContainer:hover .userName {
+  color: #00BCD4;
+}
+
+.userContainer:hover .arrowIcon {
+  color: #00BCD4;
+}
+
+.userIconLoginContainer {
+  background-color: #D9D9D9;
+  border-radius: 100px;
+  padding: 5px 6px;
+}
+
+.userIconLoginContainer span {
+  color: #0084FF;
+}
+
+/* Menu desplegable Desktop */
+.userMenu {
+  position: absolute;
+  top: calc(100%);
+  right: 0;
+  background-color: #1e1e1e;
+  padding: 10px;
+  z-index: 4;
+  width: 260px;
+
+  & hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 10px 0;
+  }
+}
+
+.profileLinkContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 2px 8px;
+}
+
+.profileLinkContainer:hover {
+  background-color: #333;
+  width: 100%;
+}
+
+.profileLinkContainer>.userIconLoginContainer {
+  padding: 6px 8px;
+}
+
+.profileLinkContainer>.userIconLoginContainer span {
+  font-size: 19px;
+}
+
+.userProfileInfoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.userProfileInfoContainer h3 {
+  font-weight: bold;
+  font-size: 19px;
+  padding: 0;
+}
+
+.userProfileInfoContainer p {
+  font-size: 13px;
+}
+
+.menuOption {
+  cursor: pointer;
+  padding: 8px;
+  color: #ddd;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.menuOption:hover {
+  background-color: #333;
+}
+
+.logOutOption {
+  padding: 10px;
+  font-size: 16px;
+  color: #FF6F61;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.logOutOption:hover {
+  background-color: #FF6F61;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile */
+.userIconContainer {
+  display: none;
+}
+
+.mobileUserMenu {
+  display: none;
+}
+
+.darkLayer {
+  display: none;
+}
+
+
+/*Loading Component*/
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 100px;
+}
+
+.userIcon {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  #mobile {
+    display: flex;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .userIconContainer {
+    display: block;
+  }
+
+  /* MENU MOBILE LOGIN*/
+
+  @keyframes fadeInBackground {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .darkLayer {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 68px);
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+  }
+
+  .darkLayerActive {
+    display: block;
+    z-index: 3;
+    opacity: 1;
+    animation: fadeInBackground .3s forwards;
+  }
+
+  .mobileUserMenu {
+    background-color: #222222;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    height: calc(100vh - 68px);
+    position: fixed;
+    right: -50vw;
+    transition: all .3s;
+    width: 50vw;
+    z-index: 4;
+  }
+
+  .mobileUserMenuActive {
+    right: 0;
+  }
+
+  #profileMenuOption {
+    padding: 10px;
+    background-color: #1E1E1E;
+  }
+
+  #profileMenuOption>.userIconLoginContainer {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 8px 10px;
+  }
+
+  #profileMenuOption>.userIconLoginContainer span {
+    font-size: 26px;
+  }
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0px 10px;
+  }
+
+  .menuOption {
+    border-radius: 7px;
+    max-width: 100%;
+    background-color: #333;
+    gap: 1em;
+  }
+
+  .contentMenuMobileContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 0 20px;
+
+  }
+
+  .menuOption:hover {
+    background-color: #444;
+  }
+
+  .bottomMenuMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .bottomMenuMobile hr {
+    border-color: rgba(255, 255, 255, 0.392);
+  }
+
+  .logOutButtonContainer {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    padding: 0px 10px;
+  }
+
+  .logOutOption {
+    border-radius: 7px;
+    background-color: #b74e45;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+  }
+
+
+
+  /* USER NAV */
+  .userIconContainer {
+    background-color: #333333;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .1s;
+  }
+
+  .userIcon {
+    font-size: 20px;
+  }
+
+  .userIconContainer:hover {
+    background-color: #222;
+  }
+
+  /* LOGIN MOBILE */
+
+  .userContainer:hover>.userIconLoginContainer {
+    background-color: #D9D9D9;
+  }
+
+  .userContainer:hover>.userIconLoginContainer span {
+    color: #0084FF;
+  }
+
+  .userContainer:hover .userName {
+    color: #F8F9FA;
+  }
+
+  .userContainer:hover .arrowIcon {
+    color: #F8F9FA;
+  }
+
+  /* MENU ABIERTO */
+
+  .userContainer {
+    position: relative;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .mobileUserMenu {
+    width: 100vw;
+    right: -100vw;
+  }
+
+  .mobileUserMenuActive {
+    right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .mobileUserMenu {
+    height: calc(100vh - 64px);
+  }
+
+  .userIconContainer {
+    width: 38px;
+    height: 38px;
+  }
+
+  .userIcon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobileUserMenu {
+    height: calc(100vh - 60px);
+  }
+
+  .userIconContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .userIcon {
+    font-size: 16px;
+  }
+
+  /* MOBILE LOGIN LOGO*/
+
+  .userIconLoginContainer {
+    padding: 2px 4px;
+  }
+
+  .userIconLoginContainer span {
+    font-size: 14px;
+  }
+
+  .userNameContainer {
+    gap: .3em;
+  }
+
+  .userContainer .userName {
+    font-size: 14px;
+  }
+
+  .userContainer .arrowIcon {
+    font-size: 14px;
+  }
+
+  /*MOBILE LOGIN MENU*/
+
+  .mobileUserMenu {
+    gap: 1em;
+  }
+
+  #profileMenuOption {
+    padding: 10px;
+    background-color: #1E1E1E;
+  }
+
+  #profileMenuOption>.userIconLoginContainer {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 6px 8px;
+  }
+
+  #profileMenuOption>.userIconLoginContainer span {
+    font-size: 22px;
+  }
+
+  #profileMenuOption h3 {
+    font-size: 17px;
+  }
+
+  #profileMenuOption p {
+    font-size: 13px;
+  }
+
+  .menuOption {
+    font-size: 14px;
+  }
+
+  .logOutOption {
+    font-size: 15px;
+  }
+
+
+}

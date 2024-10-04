@@ -1,0 +1,126 @@
+.header {
+  background-color: #111111;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  max-height: 86px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+#mobile {
+  display: none;
+}
+
+.headerMainContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.logoIcon {
+  color: #0084FF;
+  font-size: 22px;
+  transform: scale(2);
+
+  transition: all 0.3s ease;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  color: #F8F9FA;
+}
+
+.logoContainer:hover .logoIcon {
+  transform: scale(2) rotate(70deg);
+}
+
+.logoContainer:hover .logoText {
+  transform: scale(1.1);
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .desktopNav {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
+  }
+
+  .userIconContainer {
+    display: block;
+  }
+
+  .header {
+    max-height: 68px;
+  }
+
+  .headerMainContainer {
+    max-width: 960px;
+    padding: 0 15px;
+  }
+
+  .logoContainer {
+    gap: 1em;
+  }
+
+  .logoContainer .logoIcon,
+  .logoContainer .logoText {
+    font-size: 19px;
+  }
+
+  .logoContainer:hover .logoIcon {
+    transform: scale(2) rotate(0);
+  }
+
+  .logoContainer:hover .logoText {
+    transform: scale(1);
+  }
+
+}
+
+@media (max-width: 575px) {
+  .header {
+    height: 64px;
+  }
+
+  .logoContainer .logoIcon,
+  .logoContainer .logoText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header {
+    height: 60px;
+  }
+
+  .logoContainer .logoIcon,
+  .logoContainer .logoText {
+    font-size: 14px;
+  }
+}

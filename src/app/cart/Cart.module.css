@@ -1,0 +1,410 @@
+.mobile {
+  display: none;
+}
+
+.main {
+  background-color: #1E1E1E;
+  min-height: calc(100vh - 135px);
+  width: 100%;
+}
+
+.mainNotProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3em 20px;
+}
+
+.mainContent a {
+  color: #00BCD4;
+  text-decoration: none;
+}
+
+.mainContent a:hover {
+  color: #2fd9ef;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.productsContainer {
+  border: 1px solid #F8F9FA30;
+  border-radius: 7px;
+  max-width: 650px;
+  width: 100%;
+  background-color: #1E1E1E;
+  margin: 0;
+  position: relative;
+}
+
+.productsContainer h3 {
+  border: 0px solid #F8F9FA30;
+  font-size: 20px;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #1E1E1E;
+  z-index: 2;
+  color: #F8F9FA;
+  margin: 0;
+}
+
+.productsCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.product {
+  border: 1px solid #F8F9FA30;
+  border-radius: 3px;
+  background-color: #2E2E2E;
+  padding: 15px 0;
+  display: flex;
+  width: 100%;
+}
+
+.productImgContainer {
+  padding: 0 25px;
+  display: flex;
+  height: max-content;
+  margin: auto 0;
+}
+
+.productImgContainer img {
+  width: 70px;
+  height: auto;
+}
+
+.productDetailContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .3em;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productInfo h4 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.productInfo .amount {
+  color: rgba(255, 255, 255, 0.577);
+  font-weight: 400;
+}
+
+.productPrice {
+  color: #00BCD4;
+}
+
+.productDetailContainer p {
+  color: #F8F9FA40;
+}
+
+
+.removeButton {
+  color: #D9534F;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 10px;
+  width: max-content;
+}
+
+.removeButton:hover {
+  color: #b83a35;
+}
+
+.resumeContainer {
+  border: 1px solid #F8F9FA30;
+  border-radius: 7px;
+  height: max-content;
+  width: 100%;
+  max-width: 370px;
+  background-color: #2E2E2E;
+  color: #F8F9FA;
+}
+
+.resumeContainer h3 {
+  font-size: 22px;
+  padding: 15px;
+  border-bottom: 0px solid #F8F9FA30;
+  margin: 0;
+  background-color: #1E1E1E;
+  color: #F8F9FA;
+}
+
+.resumeMainContent {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #00BCD4;
+  font-weight: bold;
+}
+
+.totalContainer {
+  margin-top: 20px;
+  border-top: 1px solid #F8F9FA30;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.continueButton {
+  color: #F8F9FA;
+  background-color: #0084FF;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px;
+  width: 100%;
+  transition: background .2s;
+  margin-top: 20px;
+}
+
+.continueButton:hover {
+  background-color: #0067c7;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    min-height: calc(100vh - 130px);
+  }
+
+  .mainContent {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .mainContent a {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #00BCD4;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #00BCD4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 3em;
+  }
+
+  .productsContainer {
+    max-width: 100%;
+  }
+
+  .removeButton {
+    color: #F8F9FA;
+    background-color: #D9534F;
+    padding: 4px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 10px;
+    width: max-content;
+  }
+
+  .resumeContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: calc(100vh - 117px);
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mainContent a {
+    font-size: 14px;
+  }
+
+  .productsContainer h3 {
+    font-size: 18px;
+  }
+
+  .productInfo h4 {
+    font-size: 16px;
+  }
+
+  .productDetailContainer p,
+  .resumeMainContent {
+    font-size: 16px;
+  }
+
+  .resumeContainer h3 {
+    font-size: 20px;
+  }
+
+  .itemRow p {
+    font-size: 16px;
+  }
+
+  .continueButton {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .removeButton {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #D9534F;
+    color: #F8F9FA;
+  }
+}
+
+@media (max-width: 575px) {
+  .mainContent {
+    padding: 10px;
+  }
+
+  .productImgContainer {
+    padding: 0 10px;
+  }
+
+  .mainContent a {
+    font-size: 13px;
+  }
+
+  .productsContainer h3 {
+    font-size: 16px;
+  }
+
+  .productInfo h4 {
+    font-size: 14px;
+  }
+
+  .productDetailContainer p,
+  .resumeMainContent {
+    font-size: 14px;
+  }
+
+  .resumeContainer h3 {
+    font-size: 18px;
+  }
+
+  .itemRow p {
+    font-size: 14px;
+  }
+
+  .continueButton {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .removeButton {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    min-height: calc(100vh - 102px);
+  }
+
+  .mainContent a {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .main {
+    min-height: calc(100vh - 98px);
+  }
+
+  .mainContent {
+    padding: 8px;
+  }
+
+  .mainContent a {
+    font-size: 11px;
+  }
+
+  .productsContainer h3 {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .productInfo h4 {
+    font-size: 13px;
+  }
+
+
+
+  .productDetailContainer p,
+  .resumeMainContent {
+    font-size: 12px;
+  }
+
+  .resumeContainer h3 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .itemRow p {
+    font-size: 12px;
+  }
+
+  .continueButton {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .removeButton {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}

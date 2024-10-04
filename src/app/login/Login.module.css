@@ -1,0 +1,247 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 135px);
+  background: url(../../assets/img/backgroundFormspng.png) no-repeat center center/cover;
+}
+
+.formContainer {
+  max-width: 450px;
+  margin: 2em 0;
+  width: 100%;
+}
+
+.form {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 100%;
+  border-bottom: 2px solid #3998ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formHeading {
+  color: #3998ff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  margin: 0.3em 0 1.3em;
+}
+
+.formGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 16px;
+  padding: 0 1px;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+.inputField {
+  font-size: 15px;
+  padding: 10px 12px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  margin-top: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+.inputField:focus {
+  border-bottom: 2px solid #3998ff;
+  box-shadow: 0 0 8px rgba(57, 152, 255, 0.6);
+}
+
+.errorField {
+  border-bottom: 2px solid #ff4d4d;
+  background-color: #222;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.errorField:focus {
+  border-bottom: 2px solid #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+
+.successField {
+  border-bottom: 2px solid #00ff66;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.successField:focus {
+  border-bottom: 2px solid #388e3c;
+  box-shadow: 0 0 8px rgba(56, 142, 60, 0.6);
+}
+
+.errorMessage {
+  margin: 5px 0 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff6b6b;
+}
+
+.btnContainer {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.submitButton {
+  color: white;
+  cursor: pointer;
+  background-color: #017cff;
+  border: none;
+  box-shadow: 0px 0px 5px #017cff;
+  padding: 12px 0;
+  transition: all 0.3s;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.submitButton:hover {
+  background-color: #005bb5;
+  box-shadow: 0px 0px 7px #005bb5;
+}
+
+.registerLinkContainer {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.registerLink {
+  color: #3998ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    min-height: calc(100vh - 130px);
+    display: flex;
+  }
+
+  .formContainer {
+    max-width: 720px;
+    min-height: 40vh;
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .form {
+
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    max-width: 100%;
+    margin: 0em 0;
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+    border: 0;
+    border-radius: 0px;
+    min-height: calc(100vh - 117px);
+  }
+}
+
+@media (max-width: 575px) {
+  .formHeading {
+    font-size: 26px;
+  }
+
+  .formGroup label {
+    font-size: 15px;
+  }
+
+  .inputField {
+    font-size: 15px;
+  }
+
+  .errorMessage {
+    font-size: 13px;
+  }
+
+  .submitButton {
+    padding: 8px 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    min-height: calc(100vh - 102px);
+  }
+
+  .inputField {
+    padding: 8px 10px;
+  }
+
+  .submitButton {
+
+    font-size: 14px;
+  }
+
+  .registerLinkContainer {
+    margin-top: 2em;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .form {
+    min-height: calc(100vh - 98px);
+  }
+
+  .formHeading {
+    font-size: 24px;
+  }
+
+  .formGroup label {
+    font-size: 13px;
+  }
+
+  .inputField {
+    font-size: 13px;
+  }
+
+  .errorMessage {
+    font-size: 11px;
+  }
+
+  .submitButton {
+    padding: 6px 0;
+    font-size: 13px;
+  }
+
+  .registerLinkContainer {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,23 @@
+.wrapper {
+  margin-top: 86px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    margin-top: 68px;
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 575px) {
+  .wrapper {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    margin-top: 60px;
+  }
+}

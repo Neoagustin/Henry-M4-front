@@ -121,21 +121,43 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .cardContainer {
 
     & img {
-      width: 45%;
+      width: 40%;
       margin-bottom: 10px;
     }
 
     & h3 {
-      font-size: 15px;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    & p {
+      font-size: 17px;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+
+
+  .cardContainer {
+
+    & img {
+      width: 40%;
+      margin-bottom: 10px;
+    }
+
+    & h3 {
+      font-size: 14px;
       margin-bottom: 2px;
     }
 
     & p {
-      font-size: 15px;
+      font-size: 14px;
       margin: 0;
     }
   }

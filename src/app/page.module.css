@@ -162,6 +162,7 @@
   .main {
     padding: 0px 15px;
     margin-bottom: 1em;
+    min-height: 62vh;
 
     .mobileTitle {
       font-size: 20px;
@@ -174,15 +175,17 @@
         gap: 15px;
       }
     }
+
   }
 }
 
 @media (max-width: 380px) {
   .main {
     padding: 0px 15px;
+    min-height: 60vh;
 
     .mobileTitle {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .mainContent {

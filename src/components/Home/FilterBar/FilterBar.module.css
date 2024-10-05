@@ -148,10 +148,11 @@
   }
 
   .mobileSelect {
-    margin: 4px 0 7px;
+    margin: 4px 0 4px;
     border-radius: 0;
-    padding: 3px 10px;
-    max-width: 100px;
-    font-size: 13px;
+    padding: 2px 10px;
+    max-width: 90px;
+    font-size: 12px;
+
   }
 }

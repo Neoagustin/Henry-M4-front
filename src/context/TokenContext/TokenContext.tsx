@@ -4,7 +4,10 @@
 import React, { createContext, useState, useContext, ReactNode } from "react";
 import { ITokenContext } from "./types";
 
-const TokenContext = createContext<ITokenContext | undefined>(undefined);
+const TokenContext = createContext<ITokenContext>({
+  token: null,
+  setToken: () => {},
+});
 
 export const TokenProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [token, setToken] = useState<string | null>(
@@ -17,7 +20,7 @@ export const TokenProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 export const useToken = () => {
   const context = useContext(TokenContext);
   if (!context) {
-    throw new Error("useToken must be used within a TokenProvider");
+    throw new Error("useUser debe ser utilizado dentro de un TokenProvider");
   }
   return context;
 };

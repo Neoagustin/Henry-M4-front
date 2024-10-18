@@ -3,23 +3,18 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   onDemandEntries: {
-    // Devuelve el código de las páginas en cada solicitud
-    maxInactiveAge: 25 * 1000, // Tiempo máximo para mantener las páginas en caché
-    pagesBufferLength: 2, // Cuántas páginas mantener en el búfer
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'acdn.mitiendanube.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3001',
-        pathname: '/**',
-      },
+    domains: [
+      'techba.ar',
+      'acdn.mitiendanube.com',
+      'cdsassets.apple.com',
+      'outtec.com.ar',
+      'www.apple.com',
+      'http2.mlstatic.com',
+      'segurocelular.com.ar',
     ],
   },
 };

@@ -29,9 +29,21 @@ const Register = () => {
         confirmButtonText: "Iniciar sesión",
         confirmButtonColor: "#3085d6",
       });
+
       router.push("/login");
-    } catch (err) {
-      console.log(err);
+    } catch (err: any) {
+      if (err.response.data.message === "User already exists") {
+        await Swal.fire({
+          title: "Error",
+          text: "El usuario ingresado ya existe. Por favor, intenta con otro.",
+          icon: "error",
+          timer: 3000,
+          timerProgressBar: true,
+        });
+
+        return;
+      }
+
       await Swal.fire({
         title: "Error",
         text: "Hubo un problema al crear tu cuenta. Por favor, intenta nuevamente.",

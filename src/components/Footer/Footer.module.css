@@ -13,7 +13,6 @@
   padding: 0 20px;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .footer {
     font-size: 0.75rem;

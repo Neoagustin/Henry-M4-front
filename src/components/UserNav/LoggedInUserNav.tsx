@@ -11,7 +11,7 @@ import { useUser } from "@/context/UserContext/UserContext";
 import useUserMenu from "@/hooks/useLoggedInUserMenu";
 import Link from "next/link";
 
-// Función utilitaria: extraída para mayor legibilidad y reutilización
+//? Función utilitaria: extraída para mayor legibilidad y reutilización
 const getInitials = (name: string | undefined) => {
   if (!name) return null;
   const [firstName, secondName] = name.split(" ");
@@ -19,7 +19,7 @@ const getInitials = (name: string | undefined) => {
   return initials;
 };
 
-// Subcomponente para el menú desplegable
+//? Subcomponente para el menú desplegable
 const UserDropdownMenu = ({ userName, initials, handleLogOut, menuRef }: any) => {
   return (
     <div className={styles.userMenu} ref={menuRef}>
@@ -56,20 +56,12 @@ const LoggedInUserNav: React.FC = () => {
   const { user } = useUser();
   const { isLoading, menuOpen, toggleMenu, handleLogOut, menuRef } = useUserMenu();
 
-  // Agrega console.log para verificar el estado del usuario
-  console.log("User:", user);
-  console.log("isLoading:", isLoading);
-  console.log("Menu Open:", menuOpen);
-
   const initials = getInitials(user?.name);
   const userName = user?.name?.split(" ")[0];
 
   if (isLoading) {
     return <div>Cargando...</div>;
   }
-
-  console.log("Initials:", initials);
-  console.log("User Name:", userName);
 
   return (
     <>

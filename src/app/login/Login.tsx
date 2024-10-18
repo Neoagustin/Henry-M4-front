@@ -42,7 +42,7 @@ const Login: React.FC = () => {
           popup: "swal-popup",
         },
       });
-    } catch (err) {
+    } catch (err: any) {
       await Swal.fire({
         title: "Error",
         text: "No se pudo iniciar sesión. Por favor, verifica tus credenciales e intenta nuevamente.",

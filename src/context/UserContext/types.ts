@@ -1,6 +1,13 @@
+import { IOrder } from "@/app/profile/orders/types";
+
 export interface ICredential {
   id: number;
   password: string;
+}
+
+export interface CreateOrderDto {
+  userId: number;
+  products: number[];
 }
 
 export interface IUserContext {
@@ -11,7 +18,7 @@ export interface IUserContext {
   phone: string;
   role: string;
   credential: ICredential;
-  orders: any[];
+  orders: IOrder[];
 }
 
 export interface IUserContextType {

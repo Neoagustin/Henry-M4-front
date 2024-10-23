@@ -1,3 +1,5 @@
+"use client";
+
 // Vendors
 import React from "react";
 
